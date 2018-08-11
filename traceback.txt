@@ -1,31 +1,29 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/tl/spanish/Chapter6.rpy", line 1375, in script
-    g "¡¡¡[povname!!!"
-Exception: String u'\xa1\xa1\xa1[povname!!!' ends with an open format operation.
+  File "game/script.rpy", line 8, in script
+    init python:
+  File "game/script.rpy", line 11, in <module>
+    renpy.change_language("spanish")
+TypeError: argument of type 'NoneType' is not iterable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/tl/spanish/Chapter6.rpy", line 1375, in script
-    g "¡¡¡[povname!!!"
-  File "D:\Documents\Downloads\Ren'Py Ocean Blues\OceanBlues-1.0-all\renpy\ast.py", line 593, in execute
-    renpy.exports.say(who, what, interact=self.interact)
-  File "D:\Documents\Downloads\Ren'Py Ocean Blues\OceanBlues-1.0-all\renpy\exports.py", line 1021, in say
-    who(what, interact=interact)
-  File "D:\Documents\Downloads\Ren'Py Ocean Blues\OceanBlues-1.0-all\renpy\character.py", line 817, in __call__
-    what = what_pattern.replace("[what]", sub(what, translate=translate))
-  File "D:\Documents\Downloads\Ren'Py Ocean Blues\OceanBlues-1.0-all\renpy\character.py", line 799, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "D:\Documents\Downloads\Ren'Py Ocean Blues\OceanBlues-1.0-all\renpy\substitutions.py", line 229, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 543, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 552, in _vformat
-  File "D:\Documents\Downloads\Ren'Py Ocean Blues\OceanBlues-1.0-all\renpy\substitutions.py", line 157, in parse
-    raise Exception("String {0!r} ends with an open format operation.".format(s))
-Exception: String u'\xa1\xa1\xa1[povname!!!' ends with an open format operation.
+  File "game/script.rpy", line 8, in script
+    init python:
+  File "C:\Users\kenny\Downloads\renpy-6.99.14.3-sdk\renpy\ast.py", line 862, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\kenny\Downloads\renpy-6.99.14.3-sdk\renpy\python.py", line 1912, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 11, in <module>
+    renpy.change_language("spanish")
+  File "C:\Users\kenny\Downloads\renpy-6.99.14.3-sdk\renpy\translation\__init__.py", line 614, in change_language
+    renpy.style.restore(style_backup)  # @UndefinedVariable
+  File "style.pyx", line 826, in renpy.style.restore
+TypeError: argument of type 'NoneType' is not iterable
 
-Windows-7-6.1.7601-SP1
-Ren'Py 6.99.4.467
+Windows-8-6.2.9200
+Ren'Py 7.0.0.196
 Ocean Blues 0.0
+Fri Aug 10 18:56:49 2018

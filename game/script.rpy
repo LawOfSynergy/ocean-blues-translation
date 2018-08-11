@@ -7,6 +7,9 @@
 #define goro = Character('Goro', color = "#ffffff")
 init python:
 
+    # Set Language to Spanish
+    config.language="spanish"
+
     #looping sound and music
     renpy.music.register_channel("Sound1", "music", True)
     renpy.music.register_channel("sfx1", "sfx", True)
@@ -15,8 +18,6 @@ init python:
     renpy.music.register_channel("sfx4", "sfx", True)
 
 init:
-    # Set Language to Spanish
-    renpy.change_language("spanish")
 
     $ bonus = 0
 
@@ -347,6 +348,7 @@ image alert1 = "UI/Alert1.png"
 image alert2 = "UI/Alert2.png"
 
 # The game starts here.
+
 label splashscreen:
     scene black
     with Pause(1)
